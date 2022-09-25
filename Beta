@@ -1,7 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({IntroText = "Sa Kanki",Name = "Cathe Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "konfig cathe"})
+local Window = OrionLib:MakeWindow({IntroText = "Sa Kanki Neden Buralarda Yoktun",Name = "Cathe Hub", HidePremium = true, SaveConfig = true, ConfigFolder = "Sen Kullanmak Cathe Yapmak Script"})
 local GameTab = Window:MakeTab({
-	Name = "Atomatik",
+	Name = "Otomatik",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -25,7 +25,7 @@ end
 })
 GameTab:AddParagraph("Uyari","Bunu acarsan durdurmak icin cik gir yapiniz")
 local CharTab = Window:MakeTab({
-	Name = "karakter",
+	Name = "Karakter",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -40,7 +40,7 @@ CharTab:AddSlider({
 	Name = "Hiz",
 	Min = 0,
 	Max = 200,
-	Default = 5,
+	Default = 10,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	Callback = function(Value)
@@ -151,9 +151,11 @@ local ohNumber1 = 100
 game:GetService("ReplicatedStorage").GTycoonClient.Remotes.BuyDropper:FireServer(ohNumber1)
   	end    
 })
-GameTab:AddParagraph("uyari","Cathe burdaydi")
+GameTab:AddParagraph("Uyari","Cathe burdaydi")
 
 --Sa
+
+--As
 
 game:GetService("RunService").RenderStepped:Connect(function()
     pcall(function()
@@ -173,10 +175,12 @@ local CreditsTab = Window:MakeTab({
 
 CreditsTab:AddParagraph("Cathe Pro","Tsk kullandigin icin")
 
+CreditsTab:AddParagraph("Levii","Duzeltmeler vb")
+
 CreditsTab:AddParagraph("Discord invite","https://discord.gg/dvv45kHDSQ")
 
 coroutine.resume(NotificationCoroutine)
 
 OrionLib:Init()
 
-task.wait(2)
+task.wait(1)
