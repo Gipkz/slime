@@ -23,7 +23,19 @@ game:GetService("ReplicatedStorage").GTycoonClient.Remotes.DepositDrops:FireServ
 end
   	end    
 })
-GameTab:AddParagraph("Uyari","Bunu acarsan durdurmak icin cik gir yapiniz")
+GameTab:AddParagraph("Uyari","Bunlari acarsan durdurmak icin cik gir yapiniz")
+GameTab:AddButton({
+	Name = "Otomatik Rate",
+	Callback = function()
+while wait(0.4) do
+local ohNumber1 = math.huge
+
+local ohNumber1 = 1
+
+game:GetService("ReplicatedStorage").GTycoonClient.Remotes.BuySpeed:FireServer(ohNumber1)
+end
+  	end    
+})
 local CharTab = Window:MakeTab({
 	Name = "Karakter",
 	Icon = "rbxassetid://4483345998",
